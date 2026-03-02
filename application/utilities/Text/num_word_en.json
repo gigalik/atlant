@@ -1,0 +1,260 @@
+{
+  "measure": {
+    "product": [
+      "product",
+      "goods",
+      "goods"
+    ],
+    "thing": [
+      "thing",
+      "pieces",
+      "things"
+    ],
+    "package": [
+      "package",
+      "packaging",
+      "packages"
+    ],
+    "box": [
+      "box",
+      "boxes",
+      "boxes"
+    ],
+    "pack": [
+      "pack",
+      "packs",
+      "packs"
+    ],
+    "kit": [
+      "set",
+      "set",
+      "sets"
+    ],
+    "instance": [
+      "instance",
+      "instance",
+      "instances"
+    ],
+    "roll": [
+      "roll",
+      "roll",
+      "rolls"
+    ],
+    "sheet": [
+      "sheet",
+      "sheet",
+      "sheets"
+    ],
+    "linear meter": [
+      "running meter",
+      "running meters",
+      "running meters"
+    ]
+  },
+  "economic": {
+    "percent": [
+      "percent",
+      "percent",
+      "percent"
+    ],
+    "ruble": [
+      "ruble",
+      "ruble",
+      "rubles"
+    ],
+    "dollar": [
+      "dollar",
+      "dollar",
+      "dollars"
+    ],
+    "cu": [
+      "conventional unit",
+      "conventional units",
+      "conventional units"
+    ]
+  },
+  "weight": {
+    "ton": [
+      "ton",
+      "tons",
+      "tons"
+    ],
+    "dollar": [
+      "centner",
+      "centner",
+      "quintals"
+    ],
+    "centner": [
+      "kilogram",
+      "kilogram",
+      "kilograms"
+    ],
+    "kilogram": [
+      "gram",
+      "gram",
+      "grams"
+    ],
+    "milligram": [
+      "milligram",
+      "milligram",
+      "milligrams"
+    ]
+  },
+  "length": {
+    "kilometer": [
+      "kilometer",
+      "kilometer",
+      "kilometers"
+    ],
+    "meter": [
+      "meter",
+      "meter",
+      "meters"
+    ],
+    "centimeter": [
+      "centimeter",
+      "centimeter",
+      "centimeters"
+    ],
+    "millimeter": [
+      "millimeter",
+      "millimeter",
+      "millimeters"
+    ]
+  },
+  "volume": {
+    "cube": [
+      "cube",
+      "cuba",
+      "cubes"
+    ],
+    "liter": [
+      "liter",
+      "liter",
+      "liters"
+    ],
+    "milliliter": [
+      "milliliter",
+      "milliliter",
+      "milliliters"
+    ]
+  },
+  "square": {
+    "hectare": [
+      "hectare",
+      "hectare",
+      "hectares"
+    ],
+    "acre": [
+      "acre",
+      "acra",
+      "acres"
+    ],
+    "hundredth": [
+      "weave",
+      "hundreds",
+      "hundredths"
+    ],
+    "square meter": [
+      "square meter",
+      "square meters",
+      "square meters"
+    ]
+  },
+  "datetime": {
+    "year": [
+      "year",
+      "of the year",
+      "years"
+    ],
+    "month": [
+      "month",
+      "month",
+      "months"
+    ],
+    "day": [
+      "day",
+      "of the day",
+      "days"
+    ],
+    "hour": [
+      "hour",
+      "hours",
+      "hours"
+    ],
+    "minute": [
+      "minute",
+      "minutes",
+      "minutes"
+    ],
+    "second": [
+      "second",
+      "seconds",
+      "seconds"
+    ],
+    "microsecond": [
+      "microsecond",
+      "microseconds",
+      "microseconds"
+    ],
+    "millisecond": [
+      "millisecond",
+      "milliseconds",
+      "milliseconds"
+    ]
+  },
+  "technical": {
+    "revolution per minute": [
+      "revolution per minute",
+      "rpm",
+      "rpm"
+    ],
+    "kilometer per hour": [
+      "kilometer per hour",
+      "kilometers per hour",
+      "kilometers per hour"
+    ],
+    "Horsepower": [
+      "Horsepower",
+      "horsepower",
+      "Horse power"
+    ],
+    "degree": [
+      "degree",
+      "degrees",
+      "degrees"
+    ],
+    "calorie": [
+      "calorie",
+      "calories",
+      "calories"
+    ]
+  },
+  "text": {
+    "paragraph": [
+      "paragraph",
+      "paragraph",
+      "paragraphs"
+    ],
+    "offer": [
+      "offer",
+      "offers",
+      "offers"
+    ],
+    "word": [
+      "word",
+      "words",
+      "words"
+    ],
+    "sign": [
+      "sign",
+      "sign",
+      "signs"
+    ],
+    "symbol": [
+      "symbol",
+      "symbol",
+      "symbols"
+    ]
+  }
+}
