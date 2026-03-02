@@ -1,0 +1,137 @@
+.doctor {
+    &__card {
+        border-radius: 30px;
+        overflow: hidden;
+        background-color: $gray;
+        @include ui-fz-18;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        @media (max-width: 575px) {
+            border-radius: 20px;
+        }
+    }
+    &__info {
+        @include adaptiveValue("padding-top", 40, 20);
+        @include adaptiveValue("padding-bottom", 40, 20);
+        @include adaptiveValue("padding-right", 40, 20);
+        @include adaptiveValue("padding-left", 40, 20);
+    }
+    &__img {
+        @include adaptiveValue("height", 320, 155);
+    }
+    &__img-page {
+        max-width: 565px;
+        aspect-ratio: 565/565;
+        border-radius: 30px;
+        overflow: hidden;
+        @media (max-width: 768px) {
+            border-radius: 20px;
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        @include adaptiveValue("padding-top", 30, 20);
+    }
+    &__experience {
+        @include adaptiveValue("padding-top", 30, 20);
+    }
+    &__prof {
+        @include adaptiveValue("padding-top", 25, 15);
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+    }
+    &__wrap {
+        border-top: 1px solid #d2d2d2;
+        @include adaptiveValue("padding-top", 50, 20);
+        @include adaptiveValue("margin-top", 50, 20);
+        max-width: 753px;
+    }
+    &__content {
+        margin-left: 60px;
+        @media (max-width: 768px) {
+            margin-left: 0px;
+        }
+    }
+    &__title {
+        max-width: 423px;
+    }
+}
+
+.doc-info {
+    &__content {
+        padding-left: 40px;
+        @media (max-width: 768px) {
+            padding-left: 0px;
+        }
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 90, 20);
+        }
+    }
+    &__tags {
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        gap: 15px 30px;
+        @include adaptiveValue("margin-top", 30, 15);
+        padding: 0;
+        @media (max-width: 768px) {
+            gap: 10px 15px;
+        }
+    }
+    &__tag {
+        padding: 15px 20px;
+        background-color: white;
+        border-radius: 10px;
+        text-wrap: nowrap;
+        @media (max-width: 768px) {
+            padding: 10px 15px;
+        }
+    }
+}
+
+.timetable {
+    &__table {
+        border-collapse: collapse;
+        border-style: hidden;
+        width: 100%;
+        margin-bottom: 70px;
+        td,
+        th {
+            border: 0;
+            text-align: center;
+            font-weight: 600;
+
+            position: relative;
+            padding: 15px;
+        }
+        th {
+            white-space: nowrap;
+            padding: 15px 35px;
+            color: $light-brown;
+        }
+    }
+    &__cell {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        cursor: pointer;
+        transition: all ease-out 0.3s;
+        // &:hover {
+        //     background-color: #f8f9fa;
+        // }
+        &.bg-gray {
+            border-radius: 25px;
+            color: $light-brown;
+            margin: 10px;
+        }
+    }
+}

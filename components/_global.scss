@@ -1,0 +1,292 @@
+@mixin ui-fz-45() {
+    @include adaptiveValue("font-size", 45, 20);
+    line-height: calc(55 / 45);
+}
+@mixin ui-fz-28() {
+    @include adaptiveValue("font-size", 28, 18);
+    line-height: calc(35 / 28);
+}
+@mixin ui-fz-18() {
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: calc(25 / 18);
+}
+@mixin ui-fz-16() {
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: calc(20 / 16);
+}
+
+.sp-line-1,
+.sp-line-2,
+.sp-line-3,
+.sp-line-4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.sp-line-1 {
+    -webkit-line-clamp: 1;
+}
+
+.sp-line-2 {
+    -webkit-line-clamp: 2;
+}
+
+.sp-line-3 {
+    -webkit-line-clamp: 3;
+}
+
+.sp-line-4 {
+    -webkit-line-clamp: 4;
+}
+
+html {
+    body {
+        color: black;
+        font-family: "Montserrat";
+        font-optical-sizing: auto;
+        background-color: #f8f8f8;
+        font-weight: 400;
+        @include ui-fz-16;
+        .container-fluid {
+            max-width: 1422px;
+        }
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+        }
+        svg {
+            height: 100%;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .btn,
+        button,
+        a {
+            transition: all ease-in-out 0.3s, width 0s, height 0s;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            color: black;
+            display: inline-block;
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .btn {
+            padding: 11.5px 28px;
+            font-weight: 500;
+            border-radius: 30px;
+            border: 2px solid;
+            @include adaptiveValue("font-size", 18, 12);
+            line-height: calc(22 / 18);
+            text-wrap: nowrap;
+
+            @media (max-width: 575px) {
+                padding: 4px 15px;
+                width: 100%;
+                font-size: 14px;
+                border-radius: 15px;
+            }
+            &.btn-blue {
+                background: linear-gradient(to right, #244f79, #2d355a);
+                border-color: transparent;
+                color: $white;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                &:hover {
+                    background: linear-gradient(to right, #fff, #fff);
+                    border-color: white;
+                    color: black;
+                }
+            }
+            &.btn-border {
+                background-color: transparent;
+                border-color: #244f79;
+                color: black;
+                &:hover {
+                    background: linear-gradient(to right, #244f79, #2d355a);
+                    border-color: transparent;
+                    color: #fff;
+                }
+            }
+            &.btn-white {
+                background-color: $white;
+                border-color: $white;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+            &.btn-gray {
+                background-color: $gray;
+                border-color: $gray;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+            &__wrap {
+                display: flex;
+                gap: 30px;
+                @include adaptiveValue("margin-top", 50, 20);
+                @media (max-width: 575px) {
+                    flex-wrap: wrap;
+                    gap: 15px;
+                }
+            }
+        }
+        // .row {
+        //     gap: 30px 0;
+        // }
+    }
+}
+
+/* Custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0;
+    background: $gray;
+    border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $dark-blue;
+    border-radius: 0;
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $dark-blue;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.obj-fit-cover {
+    object-fit: cover !important;
+    object-position: center;
+}
+
+.obj-fit-contain {
+    object-fit: contain !important;
+    object-position: center;
+}
+
+// input:invalid {
+//     border-color: $dark-blue;
+// }
+// input:valid {
+//     border-color: $green;
+// }
+
+// input:invalid:not(:placeholder-shown) {
+//     border-color: $dark-blue;
+// }
+// input:valid:not(:placeholder-shown) {
+//     border-color: $green;
+// }
+
+table {
+    tr {
+        td {
+            vertical-align: middle;
+        }
+    }
+}
+.logo {
+    display: block;
+    flex-shrink: 0;
+    max-height: 70px;
+
+    @include adaptiveValue("width", 258, 147);
+}
+.fw-700 {
+    font-weight: 700;
+}
+.fw-600 {
+    font-weight: 600;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-400 {
+    font-weight: 400;
+}
+h6 {
+    @include ui-fz-16;
+}
+.card-gray {
+    @include adaptiveValue("padding-top", 40, 20);
+    @include adaptiveValue("padding-bottom", 40, 20);
+    @include adaptiveValue("padding-right", 40, 20);
+    @include adaptiveValue("padding-left", 40, 20);
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: $gray;
+    @media (max-width: 768px) {
+        border-radius: 20px;
+    }
+    &__title {
+        font-weight: 500;
+        @include ui-fz-28;
+        margin-bottom: 0;
+    }
+}
+.section {
+    @include adaptiveValue("padding-top", 55, 25);
+    @include adaptiveValue("padding-bottom", 55, 25);
+    &__title {
+        font-weight: 700;
+    }
+    &__subtitle {
+    }
+}
+.section-gray {
+    @include adaptiveValue("margin-top", 45, 25);
+    @include adaptiveValue("margin-bottom", 45, 25);
+    @include adaptiveValue("padding-top", 59, 50);
+    @include adaptiveValue("padding-bottom", 90, 50);
+    background-color: $gray;
+}
+.text-underline {
+    text-decoration: underline;
+}
+.link-blue {
+    color: #244f79;
+}
+.long {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}

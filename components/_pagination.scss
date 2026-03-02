@@ -1,0 +1,44 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    justify-content: center;
+    padding: 15px 0;
+    color: $gray;
+    &__button {
+        height: 50px;
+        width: 50px;
+        margin: 0 10px;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 1;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: none;
+        border: none;
+        background-color: $gray;
+        color: $brown;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all ease-in-out 0.3s;
+        text-decoration: none;
+        &.active {
+            color: #fff !important;
+            background-color: $green;
+            border-color: transparent;
+        }
+        &:hover {
+            color: $green;
+        }
+        @media (max-width: 575px) {
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
+.pagination-block {
+    margin-top: 70px;
+}

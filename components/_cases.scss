@@ -1,0 +1,111 @@
+.casesMain {
+    .row {
+        gap: 30px 0;
+        @media (max-width: 768px) {
+            gap: 15px 0;
+        }
+    }
+}
+.cases {
+    &__container {
+        &__img {
+            // max-width: 446px;
+            height: 366px;
+            aspect-ratio: 446/366;
+            // margin: 0 30px 34px 0;
+            border-radius: 34px;
+            object-fit: cover;
+            object-position: center;
+            @include adaptiveValue("margin-bottom", 20, 10);
+            @media (max-width: 991px) {
+                height: 320px;
+                border-radius: 17px;
+            }
+            @media (max-width: 768px) {
+                height: 214px;
+            }
+        }
+        &__category {
+            @include adaptiveValue("font-size", 20, 12);
+            font-style: italic;
+            font-weight: 500;
+            @include adaptiveValue("margin-bottom", 20, 10);
+            color: #244f79;
+        }
+        &__title {
+            @include adaptiveValue("font-size", 30, 16);
+            font-weight: 600;
+            line-height: calc(40 / 30);
+            @include adaptiveValue("margin-bottom", 20, 10);
+            // max-width: 446px;
+        }
+        &__description {
+            @include adaptiveValue("font-size", 18, 12);
+            font-weight: 400;
+            line-height: calc(28 / 18);
+            @include adaptiveValue("margin-bottom", 45, 20);
+            // max-width: 446px;
+            flex-grow: 1;
+        }
+        &__specialist {
+            align-items: center;
+            flex-wrap: wrap;
+            @include adaptiveValue("gap", 15, 10);
+
+            &__icon {
+                @include adaptiveValue("width", 46, 30);
+                @include adaptiveValue("height", 46, 30);
+                flex-shrink: 0;
+            }
+            &__name {
+                @include adaptiveValue("font-size", 16, 11);
+                font-weight: 500;
+                margin-bottom: 0;
+                max-width: 90px;
+            }
+            &__btn-container {
+                max-width: 225px;
+                max-height: 50px;
+                &__btn.btn {
+                    width: 100%;
+                    .arrow-mini {
+                        max-width: 22px;
+                        max-height: 22px;
+                        // transition: 0.3s ease;
+                        flex-shrink: 0;
+                        @media (max-width: 768px) {
+                            max-width: 18px;
+                            max-height: 18px;
+                        }
+                    }
+                }
+                // &__btn:hover {
+                //     border: solid 1px #fff;
+                //     background-color: #fff;
+                //     color: #000000;
+                //     // .arrow-mini {
+                //     //     content: url("/img/homepage/arrow-miniDark.svg");
+                //     //     transform: translateX(10px);
+                //     // }
+                // }
+            }
+        }
+    }
+}
+.casesDetail {
+    &__titles {
+        font-size: 46px;
+        font-weight: 600;
+        max-width: 500px;
+        margin-bottom: 50px;
+    }
+    &__img {
+        max-height: 750px;
+        width: auto;
+    }
+    &__description {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+}

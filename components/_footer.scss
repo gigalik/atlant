@@ -1,0 +1,165 @@
+.footer {
+    background-color: #ffff;
+    // @include adaptiveValue("padding-top", 15, 10);
+    // @include adaptiveValue("padding-bottom", 60, 15);
+    &__developer {
+        a {
+            transition: all ease-in-out 0.3s;
+            min-width: 300px;
+            display: block;
+
+            .love {
+                opacity: 0;
+                width: 0;
+                display: inline-block;
+            }
+
+            &:hover {
+                .love {
+                    animation: love 0.7s ease-in-out;
+                    opacity: 1;
+                    width: 65px;
+                }
+
+                color: #40b2ff !important;
+            }
+        }
+
+        .fw-sb {
+            font-weight: 400;
+        }
+    }
+
+    .footer-content {
+        @include adaptiveValue("padding-top", 70, 30);
+        @include adaptiveValue("padding-bottom", 70, 30);
+        .footer-left {
+            @media (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+            .logo {
+                margin-bottom: 30px;
+                @include adaptiveValue("width", 325, 195);
+            }
+            .social-icons {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 15px;
+                .footer-icon {
+                    max-width: 43px;
+                    max-height: 43px;
+                    transition: transform 0.5s ease;
+                    @media (max-width: 768px) {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+                .telegram:hover {
+                    content: url("/img/icons/telegram-active.svg");
+                }
+                .vk:hover {
+                    content: url("/img/icons/vk-active.svg");
+                }
+                .star:hover {
+                    content: url("/img/icons/star-active.svg");
+                }
+                .rutube:hover {
+                    content: url("/img/icons/rutube-active.svg");
+                }
+            }
+        }
+        .footer-middle {
+            margin: 0;
+            .footer-services {
+                text-decoration: none;
+                list-style-type: none;
+                @include adaptiveValue("font-size", 18, 12);
+                line-height: calc(30 / 18);
+                font-weight: 500;
+            }
+        }
+        .footer-right {
+            .footer-info {
+                @include adaptiveValue("font-size", 18, 12);
+                font-weight: 400;
+                line-height: calc(30 / 18);
+                max-width: 224px;
+                display: block;
+                @media (max-width: 768px) {
+                    max-width: 150px;
+                }
+                &__contain {
+                    @media (max-width: 768px) {
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        margin-bottom: 30px;
+        gap: 34px;
+        @media (max-width: 768px) {
+        }
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        gap: 150px;
+        @include adaptiveValue("padding-top", 34, 15);
+        @include adaptiveValue("padding-bottom", 34, 15);
+        background-color: #f8f8f8;
+        @media (max-width: 768px) {
+            display: block;
+            background-color: #fff;
+        }
+    }
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    &__menu-item,
+    &__list-item {
+        padding: 7.5px 0;
+        font-weight: 500;
+        @media (max-width: 768px) {
+            justify-content: flex-start;
+            padding: 5px 0;
+        }
+    }
+
+    &__copyright {
+        @include adaptiveValue("font-size", 18, 10);
+    }
+    &__policy {
+        @include adaptiveValue("font-size", 18, 10);
+    }
+    &__developer {
+        @media (max-width: 768px) {
+            margin-top: 15px;
+        }
+        @include adaptiveValue("font-size", 18, 10);
+    }
+}
+
+@keyframes love {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+        width: 65px;
+    }
+}

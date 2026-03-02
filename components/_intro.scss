@@ -1,0 +1,63 @@
+.intro {
+    @include adaptiveValue("padding-bottom", 45, 20);
+    .slick-slide {
+        padding: 0 10px;
+        margin: 0;
+        @media (max-width: 768px) {
+            padding: 0 5px;
+        }
+    }
+    .slick-list {
+        margin: 0 -10px;
+        padding: 0;
+    }
+}
+.intro-slider {
+    border-radius: 30px;
+    overflow: hidden;
+    max-height: 500px;
+    @media (max-width: 768px) {
+        overflow: visible;
+        border-radius: 20px;
+    }
+    &__slide {
+        margin: 0 10px;
+    }
+    &__item {
+        display: flex;
+        position: relative;
+        color: white;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            color: $brown;
+        }
+    }
+    &__capture {
+        position: absolute;
+        z-index: 100;
+        max-width: 510px;
+        left: 0;
+        @include adaptiveValue("padding-top", 109, 15);
+        @include adaptiveValue("padding-left", 70, 15);
+        @media (max-width: 767px) {
+            position: relative;
+            padding: 0 !important;
+        }
+    }
+    &__img {
+        width: 100%;
+        border-radius: 30px;
+        height: 500px;
+        overflow: hidden;
+        @media (max-width: 767px) {
+            height: 200px;
+            border-radius: 15px;
+        }
+    }
+    &__title {
+        @media (max-width: 768px) {
+            margin-top: 30px;
+        }
+    }
+}

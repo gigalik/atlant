@@ -1,0 +1,98 @@
+.auth {
+	display: flex;
+	height: 100dvh;
+	align-items: center;
+
+	&__card {
+		margin: 0 auto;
+		max-width: 460px;
+		background-color: $white;
+		color: $black;
+		border-radius: 30px;
+		box-shadow: 0 0 20px 2px $black;
+		@include adaptiveValue("padding", 45, 20);
+
+		&__form-group {
+			@include adaptiveValue("margin-top", 45, 20);
+
+			small {
+				display: block;
+				line-height: 1.25;
+			}
+		}
+
+		&__form-control {
+			margin-top: 15px;
+			border-radius: 30px;
+		}
+
+		&__title {
+			font-weight: 700;
+			text-align: center;
+		}
+
+		&__btns {
+			@include adaptiveValue("margin-top", 45, 20);
+			text-align: center;
+		}
+
+		&__btn {
+			margin-top: 15px;
+		}
+
+		&__link {
+			font-weight: 600;
+		}
+
+		&__footer {
+			display: flex;
+			align-items: center;
+
+			@include adaptiveValue("gap", 25, 10);
+			@include adaptiveValue("margin-top", 35, 20);
+			justify-content: center;
+		}
+
+		.nav-tabs {
+			@include adaptiveValue("margin-top", 45, 20);
+			border: 1px solid $gray;
+			border-radius: 37px;
+			flex-wrap: nowrap;
+			gap: 0;
+
+			.nav-item {
+				margin: 0;
+				flex-basis: 50%;
+
+				.nav-link {
+					border-radius: 37px;
+					border: 1px solid transparent;
+					margin: 0 auto;
+					width: 100%;
+					font-weight: 400;
+					color: $gray;
+					white-space: nowrap;
+					padding: 9px 50px;
+					transition: all 0.3s ease-in-out;
+
+					@media (max-width: 575px) {
+						padding: 9px 35px;
+					}
+
+					&:hover{
+						border-color: $blue;
+						background-color: $blue;
+						color: $white;
+					}
+
+					&.active {
+						font-weight: 600;
+						border-color: $light-blue;
+						background-color: $light-blue;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}

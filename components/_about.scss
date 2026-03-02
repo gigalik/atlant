@@ -1,0 +1,181 @@
+.about {
+    &__title {
+        @include adaptiveValue("font-size", 46, 20);
+        font-weight: 600;
+        line-height: calc(56 / 46);
+        max-width: 1398px;
+        @include adaptiveValue("margin-bottom", 50, 25);
+    }
+    &__container {
+        margin-right: 70px;
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
+        &__description {
+            @include adaptiveValue("font-size", 20, 12);
+            @include adaptiveValue("margin-bottom", 50, 25);
+            font-weight: 400;
+            line-height: calc(30 / 20);
+            max-width: 763px;
+        }
+    }
+    &__img {
+        @include adaptiveValue("margin-bottom", 30, 15);
+
+        @media (min-width: 991px) {
+            max-height: 750px;
+        }
+    }
+}
+.questions {
+    .accordion {
+        --bs-accordion-border-width: 0;
+        padding: 0;
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .accordion-button {
+            background-color: inherit;
+            font-weight: 600;
+            padding: 0;
+            @include adaptiveValue("font-size", 30, 12);
+            &:not(.collapsed) {
+                color: #030e17;
+                background-color: transparent;
+                &::after {
+                    background-image: url("/img/icons/arrow-accrd.svg");
+                }
+            }
+            &::after {
+                width: 37px;
+                height: 37px;
+                content: "";
+                background-image: url("/img/icons/arrow-accrd.svg");
+                background-position: center center;
+                @media (max-width: 768px) {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .accordion-item {
+            color: #030e17;
+            background-color: white;
+            border: 0;
+            @include adaptiveValue("padding-top", 50, 20);
+            @include adaptiveValue("padding-bottom", 50, 20);
+            @include adaptiveValue("padding-left", 50, 20);
+            @include adaptiveValue("padding-right", 50, 20);
+            margin-top: 20px;
+            box-shadow: 0 4px 18px rgba(82, 82, 82, 0.1);
+            border-radius: 30px;
+
+            &:first-of-type {
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                margin-top: 0;
+                > .accordion-header .accordion-button {
+                    border-top-left-radius: 30px;
+                    border-top-right-radius: 30px;
+                }
+            }
+
+            &:last-of-type {
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+
+                > .accordion-header .accordion-button {
+                    &.collapsed {
+                        border-bottom-left-radius: 30px;
+                        border-bottom-right-radius: 30px;
+                    }
+                }
+
+                > .accordion-collapse {
+                    border-bottom-left-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                }
+            }
+            @media (max-width: 768px) {
+                border-radius: 15px;
+                &:first-of-type {
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    margin-top: 0;
+                    > .accordion-header .accordion-button {
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px;
+                    }
+                }
+
+                &:last-of-type {
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+
+                    > .accordion-header .accordion-button {
+                        &.collapsed {
+                            border-bottom-left-radius: 15px;
+                            border-bottom-right-radius: 15px;
+                        }
+                    }
+
+                    > .accordion-collapse {
+                        border-bottom-left-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                    }
+                }
+            }
+        }
+        .accordion-body {
+            padding: 30px 0 0;
+            @include adaptiveValue("font-size", 20, 12);
+            @media (max-width: 768px) {
+                padding: 15px 0 0;
+            }
+        }
+    }
+    // .accordion-item {
+    //     border-radius: 30px;
+    //     margin-bottom: 30px;
+
+    //     &:first-of-type,
+    //     &:last-of-type {
+    //         border-radius: 30px;
+    //     }
+
+    //     &__title {
+    //         padding: 30px;
+    //         font-size: 20px;
+
+    //         font-weight: 600;
+    //         background-color: $white;
+    //         color: $black;
+    //         box-shadow: none;
+    //         border-radius: 30px;
+    //         @media (min-width: 992px) {
+    //             padding: 50px;
+    //             font-size: 30px;
+    //         }
+    //     }
+    //     &__description {
+    //         padding: 0 30px 30px;
+    //         font-size: 17px;
+    //         line-height: 30px;
+    //         font-weight: 400;
+    //         @media (min-width: 992px) {
+    //             padding: 0 50px 50px;
+    //             font-size: 20px;
+    //         }
+    //     }
+
+    //     .accordion-body {
+    //         padding: 0;
+    //         margin: 0;
+    //     }
+    // }
+}

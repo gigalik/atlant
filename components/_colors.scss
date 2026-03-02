@@ -1,0 +1,59 @@
+$white: #ffffff;
+$black: #000000;
+$gray: #f8f8fa;
+$light-gray: #edeef3;
+
+$green: #b3cf0e;
+$light-green: #d7ffd4;
+$dark-green: #8dc803;
+
+$red: #ff6163;
+$light-red: #fe7f81;
+$dark-red: #f12f32;
+
+$orange: #ff6600;
+$light-orange: #ffd1b2;
+
+$blue: #1e224d;
+$light-blue: #333ea8;
+$dark-blue: #01052d;
+
+$yellow: #ffb900;
+$light-yellow: #ffedbf;
+
+$brown: #50403a;
+$light-brown: #a5998d;
+$brown-hover: #6c4638;
+$colors: (
+    black: $black,
+    white: $white,
+    green: $green,
+    light-green: $light-green,
+    dark-green: $dark-green,
+    gray: $gray,
+    light-gray: $light-gray,
+    red: $red,
+    light-red: $light-red,
+    dark-red: $dark-red,
+    orange: $orange,
+    light-orange: $light-orange,
+    blue: $blue,
+    light-blue: $light-blue,
+    dark-blue: $dark-blue,
+    yellow: $yellow,
+    light-yellow: $light-yellow,
+    brown: $brown,
+    light-brown: $light-brown,
+);
+@each $name, $color in $colors {
+    .bg-#{"" + $name} {
+        background-color: $color !important;
+    }
+    .text-#{"" + $name} {
+        color: $color !important;
+    }
+    .btn-outline-#{"" + $name} {
+        border-color: $color !important;
+        color: $color;
+    }
+}

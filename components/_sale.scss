@@ -1,0 +1,49 @@
+.sale {
+    &__row {
+        display: flex;
+        gap: 30px;
+    }
+    &__col {
+        &:hover {
+            width: 70%;
+            .sale__description {
+                display: block;
+            }
+            color: white;
+            background-color: $light-brown;
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+    &__container {
+        transition: all ease-in-out 0.5s;
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            height: 276px;
+            width: 100%;
+        }
+    }
+    &__description {
+        display: none;
+        @include adaptiveValue("margin-top", 25, 15);
+        @include ui-fz-18;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content {
+        max-width: 440px;
+    }
+    .slick-list {
+        @media (max-width: 768px) {
+            margin: 0 -10px;
+        }
+    }
+}

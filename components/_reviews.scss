@@ -1,0 +1,103 @@
+// .reviews {
+//     &__block {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+//     &__name {
+//         color: $green;
+//         font-weight: 500;
+//         margin-top: 30px;
+//     }
+//     &__description {
+//         margin-top: 30px;
+//     }
+//     &__card {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//         gap: 30px;
+//         height: 100%;
+//     }
+//     &__card-detail {
+//         &:not(:first-child) {
+//             margin-top: 40px;
+//         }
+//     }
+//     &__btn {
+//         @include adaptiveValue("margin-top", 60, 30);
+//         display: flex;
+//         justify-content: center;
+//     }
+//     &__icon {
+//         border-radius: 50%;
+//         overflow: hidden;
+//         width: 30px;
+//         height: 30px;
+//         flex-shrink: 0;
+//     }
+//     &__callback {
+//         display: flex;
+//         gap: 10px;
+//         background-color: white;
+//         padding: 15px;
+//         border-radius: 10px;
+//         margin-top: 45px;
+//     }
+// }
+.reviews {
+    &__container {
+        padding: 50px;
+        margin: 20px 0;
+        border-radius: 30px;
+        box-shadow: 0 4px 18px rgba(82, 82, 82, 0.1);
+        overflow: hidden;
+        @media (max-width: 991px) {
+            padding: 20px;
+            border-radius: 15px;
+        }
+        &__name {
+            @include adaptiveValue("font-size", 20, 12);
+            font-weight: 600;
+
+            @include adaptiveValue("margin-bottom", 30, 15);
+        }
+        &__text {
+            @include adaptiveValue("margin-bottom", 30, 15);
+        }
+        &__review {
+            @include adaptiveValue("font-size", 20, 12);
+            font-weight: 400;
+            line-height: calc(30 / 20);
+        }
+        &__icon {
+            margin-right: auto;
+            max-height: 30px;
+            width: auto;
+            @media (max-width: 768px) {
+                max-height: 15px;
+            }
+        }
+    }
+}
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 20px;
+    &__item {
+        color: $brown-hover;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.active {
+            color: $light-brown;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
